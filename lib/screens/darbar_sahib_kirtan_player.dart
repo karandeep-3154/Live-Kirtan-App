@@ -1,8 +1,10 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
 
 class DarbarSahibKirtanPlayer extends StatefulWidget{
+  const DarbarSahibKirtanPlayer({super.key});
+
   @override
   State<DarbarSahibKirtanPlayer> createState() => _DarbarSahibKirtanPlayerState();
 }
@@ -46,7 +48,6 @@ class _DarbarSahibKirtanPlayerState extends State<DarbarSahibKirtanPlayer> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color.fromRGBO(6, 53, 84, 1.0),
@@ -117,6 +118,6 @@ color: Color.fromRGBO(6, 53, 84, 1.0),
           ],
         )
       ));
-    throw UnimplementedError();
+
   }
 }
