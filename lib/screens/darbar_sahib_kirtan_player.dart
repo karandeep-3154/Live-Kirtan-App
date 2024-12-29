@@ -1,6 +1,11 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:record/record.dart';
+import 'package:path/path.dart' as p;
 
 class DarbarSahibKirtanPlayer extends StatefulWidget{
   @override
@@ -11,8 +16,19 @@ class _DarbarSahibKirtanPlayerState extends State<DarbarSahibKirtanPlayer> {
 
   final AudioPlayer _audioPlayer = AudioPlayer(); // Use just_audio's AudioPlayer
   bool isPlaying = false;
-  final String liveKirtanUrl = 'https://live.sgpc.net:8444/;'; // Replace with your live URL
+  final String liveKirtanUrl = 'https://live.sgpc.net:8444/;';
+  final AudioRecorder audioRecorder = AudioRecorder();
+  bool isRecording = false;
+  String? recordingPath;
 
+  void _showMessage(BuildContext context, String message) {
+    final snackBar = SnackBar(
+      content: Text(message),
+      duration: Duration(seconds: 2), // The duration for which the message is visible
+    );
+
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+  }
   Future<void> _togglePlayPause() async {
 
     if (isPlaying) {
@@ -71,13 +87,41 @@ color: Color.fromRGBO(6, 53, 84, 1.0),
                 children: [
 
                   InkWell(
-                    onTap: () {
-                      print("Icon clicked!");
-                      // Call your function here
+                    onTap: () async{
+
+                      if(isRecording){
+                          String? filePath = await  audioRecorder.stop();
+                          if(filePath !=  null){
+                            setState((){
+                              isRecording=false;
+                              recordingPath = filePath;
+                              _showMessage(context, "Recording stopped and saved to ${recordingPath}");
+                              print(recordingPath);
+                              // await _audioPlayer.setFilePath(filePath);
+                              // _audioPlayer.play();
+                            });
+                          }
+                      }
+                      else{
+                        print("clicked1");
+                        if(await audioRecorder.hasPermission()){
+                          print("clicked111");
+
+                          final  appDocumentsDir = await getExternalStorageDirectory();
+                          final String filePath = "${appDocumentsDir!.path}/recording_${DateTime.now().millisecondsSinceEpoch}.mp3";
+
+                          await audioRecorder.start(const RecordConfig(), path: filePath);
+
+                          setState((){
+                            isRecording = true;
+                            recordingPath = null;
+                      });
+                      }
+                      }
                     },
                     child: Icon(
                       Icons.radio_button_checked,
-                      color: Colors.white,
+                      color: !isRecording?Colors.white:Colors.red,
                       size: 70.0,
                     ),
                   ),

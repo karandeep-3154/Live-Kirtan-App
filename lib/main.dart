@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
-import 'package:livekirtanapp/screens/darbar_sahib_kirtan_player.dart'; // Import just_audio
+import 'package:livekirtanapp/screens/darbar_sahib_kirtan_player.dart';
+import 'package:livekirtanapp/screens/splashscreen.dart'; // Import just_audio
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: DarbarSahibKirtanPlayer()
+      home: SplashScreen()
       // const MyHomePage(title: 'Live Kirtan'),
     );
   }
