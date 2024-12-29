@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:livekirtanapp/screens/kirtan_tiles.dart'; // Import just_audio
+import 'package:livekirtanapp/screens/kirtan_tiles.dart';
+import 'package:livekirtanapp/screens/splash_screen.dart'; // Import just_audio
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       
         useMaterial3: true,
       ),
-      home:  KirtanListScreen()
+      home:  SplashScreen(),
     );
   }
 }
