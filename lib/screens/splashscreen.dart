@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:livekirtanapp/screens/darbar_sahib_kirtan_player.dart';
-import 'package:livekirtanapp/screens/sisganj_sahib_kirtan_player.dart';
+import 'package:livekirtanapp/screens/mainscreen.dart';
 
 class SplashScreen extends StatefulWidget{
   @override
@@ -15,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState(){
     super.initState();
     Timer(Duration(seconds: 5), (){
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) =>(SisganjSahibKirtanPlayer())));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) =>(MainScreen())));
     });
   }
   @override
