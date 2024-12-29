@@ -112,14 +112,16 @@ class _AudioPlayerWidgetState extends State<AudioPlayerWidget> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  InkWell(
+                  widget.imageAssetPath!= "assets/hukamnamma.jpg"
+                      ? InkWell(
                     onTap: _toggleRecording,
                     child: Icon(
                       Icons.radio_button_checked,
                       color: isRecording ? Colors.red : Colors.white,
                       size: 70.0,
                     ),
-                  ),
+                  )
+                      : Container(),
                   InkWell(
                     onTap: _togglePlayPause,
                     child: Icon(

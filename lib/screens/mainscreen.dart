@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:livekirtanapp/screens/darbar_sahib_kirtan_player.dart';
 import 'package:livekirtanapp/screens/kirtan_list_screen.dart';
+import 'package:livekirtanapp/screens/recordings.dart';
 
 
 
@@ -17,7 +18,7 @@ class MainScreenState extends State<MainScreen> {
 
   // List of screens
   final List<Widget> _screens = [
-    KirtanListScreen(),KirtanListScreen(),KirtanListScreen(),   // Your HomeScreen
+    KirtanListScreen(),Recordings(),KirtanListScreen(),   // Your HomeScreen
     // const ExploreScreen(), // Your ExploreScreen
     // const ProfileScreen(), // Your ProfileScreen
   ];
