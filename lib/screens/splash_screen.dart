@@ -19,7 +19,6 @@ class SplashScreenState extends State<SplashScreen>
   void initState() {
     super.initState();
 
-    // Initialize animation
     _controller = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 3),
@@ -31,7 +30,6 @@ class SplashScreenState extends State<SplashScreen>
 
     _controller.forward();
 
-    // Navigate to the next screen after animation
     Timer(const Duration(seconds: 4), () {
       _navigateToNextScreen();
     });

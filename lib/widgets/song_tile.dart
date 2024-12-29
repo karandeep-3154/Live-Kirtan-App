@@ -10,9 +10,10 @@ class SongTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: IconButton(
-        icon: Icon(Icons.play_circle_fill, color: Colors.orange, size: 40),
-        onPressed: () => playSong(song.path),
+      onTap: () => playSong(song.path),
+      leading: Icon(
+        Icons.play_circle_fill, color: Colors.orange, size: 40
+      
       ),
       title: Text(
         song.title,
