@@ -24,6 +24,7 @@ class SongTile extends StatelessWidget {
                   subtitle: song.subtitle,
                   location: song.location,
                   imageAssetPath: song.imageAssetPath,
+                  isRecorded: false,
                 ),
           ),
         );

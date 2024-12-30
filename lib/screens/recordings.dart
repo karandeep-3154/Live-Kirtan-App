@@ -97,6 +97,7 @@ class _RecordingsState extends State<Recordings> {
                       subtitle: "Recorded Kirtan Audio ",
                       location: "India",
                       imageAssetPath: "assets/hukamnamma.jpg",
+                      isRecorded: true,
                     ),
                   ),
                 );

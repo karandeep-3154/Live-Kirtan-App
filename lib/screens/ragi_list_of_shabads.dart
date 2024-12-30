@@ -68,6 +68,9 @@ class _RagiListOfShabadsScreenState extends State<RagiListOfShabadsScreen> {
         itemBuilder: (context, index) {
           final item = titleAndUrl[index];
           return ListTile(
+
+
+            leading: const Icon(Icons.audiotrack, color: Colors.orange),
             title: Text(item['title'] ?? ''),
 
             onTap: () {
@@ -75,7 +78,7 @@ class _RagiListOfShabadsScreenState extends State<RagiListOfShabadsScreen> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => AudioPlayerWidget(liveStreamUrl: url, title: widget.name, subtitle: widget.name, location: "India", imageAssetPath: "assets/hukamnamma.jpg"),
+                  builder: (context) => AudioPlayerWidget(liveStreamUrl: url, title: widget.name, subtitle:item['title']!, location: "India", imageAssetPath: "assets/hukamnamma.jpg", isRecorded: true,),
                 ),
               );
             },

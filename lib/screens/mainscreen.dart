@@ -116,7 +116,7 @@ class CustomBottomNavBarState extends State<CustomBottomNavBar> {
               ),
             ),
           ),
-          label: 'Path Audio',
+          label: 'Ragi Wise',
         ),
       ],
 

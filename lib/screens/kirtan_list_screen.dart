@@ -16,7 +16,7 @@ class KirtanListScreen extends StatelessWidget {
     Song(
         title: "Gurdwara Sisganj Sahib",  imageAssetPath:"assets/SisganjSahib.jpg", path: "https://radio.sikhnet.com/proxy/gsisganjsahib/live", subtitle: "Gurdwara Sisganj Sahib (HD)", location: "Chandni Chowk, Delhi, India"),
     Song(
-        title: "Gurdwara Dukh Niwaran Sahib",  imageAssetPath:"assets/dukhniwaransahib.jpg", path: "http://akalmultimedia.net:8000/GDNSLDH?hash=1735484628440.mp3", subtitle: "Dukh Niwaran Sahib (HD)", location: "Ludhiana, Punjab, India"),
+        title: "Gurdwara Dukh Niwaran Sahib",  imageAssetPath:"assets/dukhniwaransahib.jpg", path: "https://radio.sikhnet.com/proxy/channel10/live", subtitle: "Dukh Niwaran Sahib (HD)", location: "Ludhiana, Punjab, India"),
      ];
 
   @override
