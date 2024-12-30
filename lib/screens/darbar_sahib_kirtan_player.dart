@@ -145,6 +145,9 @@ class _AudioPlayerWidgetState extends State<AudioPlayerWidget> {
                 ),
               ),
             ),
+            SizedBox(
+              height: 160,
+            ),
             widget.isRecorded
                 ? Padding(
               padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
@@ -181,7 +184,7 @@ class _AudioPlayerWidgetState extends State<AudioPlayerWidget> {
             )
                 : const SizedBox(),
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 15),
+              padding: const EdgeInsets.fromLTRB(0, 15, 0, 0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -222,19 +225,22 @@ class _AudioPlayerWidgetState extends State<AudioPlayerWidget> {
                 ],
               ),
             ),
-            Column(
-              children: [
-                Text(widget.title,
-                    style: const TextStyle(
-                        color: Color.fromRGBO(12, 96, 96, 1),
-                        fontSize: 19,
-                        fontWeight: FontWeight.bold)),
-                Text(widget.location,
-                    style: const TextStyle(
-                        color: Color.fromRGBO(12, 96, 96, 1),
-                        fontSize: 19,
-                        fontWeight: FontWeight.bold)),
-              ],
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 40, 0, 0),
+              child: Column(
+                children: [
+                  Text(widget.title,
+                      style: const TextStyle(
+                          color: Color.fromRGBO(12, 96, 96, 1),
+                          fontSize: 19,
+                          fontWeight: FontWeight.bold)),
+                  Text(widget.location,
+                      style: const TextStyle(
+                          color: Color.fromRGBO(12, 96, 96, 1),
+                          fontSize: 19,
+                          fontWeight: FontWeight.bold)),
+                ],
+              ),
             ),
           ],
         ),
