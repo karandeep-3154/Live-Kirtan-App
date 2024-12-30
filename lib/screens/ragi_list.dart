@@ -35,7 +35,7 @@ class _RagiListScreenState extends State<RagiListScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color.fromRGBO(232, 159, 46, 1.0),
-        title: const Text("Recorded Shabads", style: TextStyle(color: Colors.white)),
+        title: const Text("Recorded Hazris ", style: TextStyle(color: Colors.white)),
       ),
       body: Padding(
         padding: const EdgeInsets.all(12),

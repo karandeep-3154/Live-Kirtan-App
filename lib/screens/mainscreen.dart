@@ -98,7 +98,7 @@ class CustomBottomNavBarState extends State<CustomBottomNavBar> {
               ),
             ),
           ),
-          label: 'Recordings',
+          label: 'Saved',
         ),
         BottomNavigationBarItem(
           icon: Container(
@@ -116,7 +116,7 @@ class CustomBottomNavBarState extends State<CustomBottomNavBar> {
               ),
             ),
           ),
-          label: 'Ragi Wise',
+          label: 'Ragi Wise Kirtan',
         ),
       ],
 

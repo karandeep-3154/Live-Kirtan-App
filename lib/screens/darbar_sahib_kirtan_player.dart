@@ -91,7 +91,7 @@ class _AudioPlayerWidgetState extends State<AudioPlayerWidget> {
       if (response.statusCode == 200) {
         final directory = await getExternalStorageDirectory();
         final filePath =
-            "${directory!.path}/downloaded_audio_${DateTime.now().millisecondsSinceEpoch}.mp3";
+            "${directory!.path}/downloaded_audio_${widget.subtitle}";
         final file = File(filePath);
         await file.writeAsBytes(response.bodyBytes);
         _showMessage(context, "Downloaded successfully to $filePath");
@@ -141,7 +141,7 @@ class _AudioPlayerWidgetState extends State<AudioPlayerWidget> {
                   widget.imageAssetPath,
                   width: double.infinity,
                   height: 300,
-                  fit: BoxFit.cover,
+                  fit: BoxFit.fill,
                 ),
               ),
             ),
