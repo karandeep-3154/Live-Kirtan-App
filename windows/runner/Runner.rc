@@ -89,11 +89,11 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.example" "\0"
+            VALUE "CompanyName", "com.techfusionsystems" "\0"
             VALUE "FileDescription", "livekirtanapp" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
             VALUE "InternalName", "livekirtanapp" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2024 com.example. All rights reserved." "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2024 com.techfusionsystems. All rights reserved." "\0"
             VALUE "OriginalFilename", "livekirtanapp.exe" "\0"
             VALUE "ProductName", "livekirtanapp" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
